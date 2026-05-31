@@ -4,31 +4,41 @@
     box-sizing: border-box;
 }
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient(45deg, rgb(94, 100, 83), rgb(40, 39, 59));
+    
 }
+.header-style{
+    margin-top: 1em;
+    height: 10vh;
+}
+
+.input-section{
+    display: flex;
+   justify-content: center;
+   align-items: center;     
+}
+.logo{
+    font: 2em sans-serif ;
+    padding: 10px;
+    margin-left: 1em;
+}
+
 .note-txtarea{
-   padding: 20px;
-   background: linear-gradient(45deg, rgb(70, 153, 201), rgb(226, 133, 238));
-   box-shadow: 0 0 15px cyan;
+   padding: 10px;
+   box-shadow: 0 0 30px 20px  rgb(118, 192, 166, 0.5);
    border-radius: 6px;
    border: 3px white solid;
 }
 textarea{
-    padding: 0 0 0 10px;
+    padding: 0 0 0 5px;
     font: 1.5em sans-serif;
-    width: 50vw;
-    height: 100px;
-    line-height: 100px;
+    width: 40vw;
+    height: 70vh;
     resize: none;
     outline: none;  
     border: none;
     box-shadow: none;
     caret-color: black;
-    border-radius: 5px;
+    border-radius: 5px; 
     
 }
 textarea:hover{
