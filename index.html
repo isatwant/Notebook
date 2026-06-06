@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Note Book</title>
 </head>
+
 <body>
     <header class="header-style">
         <div class="logo">
-        NoteBook
+            NoteBook
         </div>
     </header>
 
-    <section class="input-section">
-     <div class="note-txtarea">
-        <textarea placeholder="Enter thoughts here"></textarea>
-    </div>
+    <section>
+        <aside class="aside_left">
+            <div class="read-btn">
+                <button class="btn"> Read </button>
+                <span class="tool-tip"> Read Note Book </span>
+            </div>
+        </aside>
+        <div class="note-txtarea">     
+                <ul class="toolbar">
+                    <li><button> Save </button></li>
+                    <li> <button> New </button></li>
+                    <li> <button> Erase </button> </li>
+                </ul>
+            <textarea placeholder="Write your new thoughts here"></textarea>
+        </div>
+        <aside class="aside_right"> aside right </aside>
     </section>
-    
-   
+
+    <footer>
+        i am footer
+    </footer>
 </body>
+
 </html>
