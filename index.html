@@ -15,31 +15,62 @@
         </div>
     </header>
 
-    <section>
-        <aside class="aside_left">
-            <div class="read-btn">
-                <button class="btn"> Read Book </button>
-                <span class="tool-tip"> Read Note Book </span>
-            </div>
-        
-        </aside>
+<section>
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+        <h3 class="sidebar-title">Notebook</h3>
 
-        <div class="note-txtarea">
-            <ul class="toolbar">
-                <li><button> Save </button></li>
-                <li> <button> New </button></li>
-                <li> <button> Erase </button> </li>
-            </ul>
-            <textarea placeholder="Write your new thoughts here"></textarea>
-        </div>
+        <button class="sidebar-btn active">
+            📚 Existed Books
+        </button>
 
-        <aside class="aside_right">
-            <div class="add-to-book-btn ">
-                <button class="btn"> Add To Book </button>
-                <span class="tool-tip"> Add Your New Notes to Book </span>
-            </div>
-        </aside>
-    </section>
+        <button class="sidebar-btn">
+            ➕ Create New Book
+        </button>
+
+        <button class="sidebar-btn">
+            📝 Drafted Pages
+        </button>
+
+        <button class="sidebar-btn">
+            ⭐ Favorites
+        </button>
+
+        <button class="sidebar-btn">
+            🗑️ Trash
+        </button>
+
+        <button class="sidebar-btn">
+            ⚙️ Settings
+        </button>
+    </aside>
+
+    <!-- Main Editor -->
+   <div class="note-txtarea">
+
+   <div class="editor-header">
+    <input class="book-name" placeholder="Untitled Note">
+    <span class="save-status">✓ Auto Saved</span>
+</div>
+
+<ul class="toolbar">
+    <li><button>B</button></li>
+    <li><button>I</button></li>
+    <li><button>U</button></li>
+    <li><button>Save</button></li>
+</ul>
+
+<textarea placeholder="Start writing your thoughts..."></textarea>
+
+<div class="editor-footer">
+    <span>Words: 0</span>
+    <span>Characters: 0</span>
+    <span>Last Edited: Today</span>
+</div>
+
+</div>
+  
+</section>
 
    
 </body>
