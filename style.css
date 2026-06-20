@@ -44,13 +44,14 @@ section {
     display: flex;
     gap: 15px;  
     min-height: 70vh;
+  
 }
 
 .aside_left,
 .aside_right {
     flex: 1;
     border-radius: 8px;
-    
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,11 +149,66 @@ textarea:focus {
     outline: none;
 }
 
+/* Existed books list */
+footer {
+    min-height: 13vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.existed-books{
+    display:flex;
+    flex-wrap: wrap;
+    gap:15px;
+    padding:10px;
+}
+
+.exist-book{
+    width: 120px;
+    height: 170px;
+    background: linear-gradient(
+        90deg,
+        #2c3e50 0%,
+        #34495e 8%,
+        #3d566e 100%
+    );
+    border-radius: 4px 10px 10px 4px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+    transition: all .3s;
+}
+
+.exist-book:hover{
+    transform: rotate(-3deg) scale(1.05);
+    cursor: pointer;
+}
+
+.book-title{
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+.book-preview{
+    margin-top:8px;
+    color:#666;
+    font-size:.9rem;
+}
+
+.book-date{
+    margin-top:10px;
+    font-size:.8rem;
+    color:#999;
+}
+
 /* Footer */
 
-footer {
-    min-height: 8vh;
-}
 
 /* Mobile */
 
@@ -172,7 +228,7 @@ footer {
     }
 }
 
-/*
-.note-txtarea { outline: 2px solid red; }
+
+ * { outline: 2px solid red; }
 .toolbar { outline: 2px solid blue; }
-textarea { outline: 2px solid green; }*/
+textarea { outline: 2px solid green; } */
