@@ -31,6 +31,13 @@ body{
     font-weight:700;
     color:#1f2937;
 }
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 /* MAIN LAYOUT */
 
@@ -84,16 +91,19 @@ section{
 }
 
 /* EDITOR */
-
-.note-txtarea{
-    flex:1;
-    background:white;
-    border-radius:16px;
-    padding:20px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    box-shadow:0 4px 20px rgba(0,0,0,.08);
+.editor-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0; /* important for flex overflow issues */
+}
+.editor-box {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    outline: none;
 }
 
 /* TITLE */
@@ -150,24 +160,9 @@ section{
 .toolbar button:hover{
     transform:translateY(-2px);
 }
-
-/* TEXTAREA */
-
-textarea{
-    flex:1;
-    width:100%;
-    resize:none;
-    border:none;
-    outline:none;
-
-    padding:25px;
-
-    font-size:1.1rem;
-    line-height:1.9;
-
-    color:#1f2937;
-
-    border-radius:12px;
+.editor-btn.active{
+    background:#111827;
+    color:white;
 }
 
 /* FOOTER INFO */
@@ -272,4 +267,25 @@ textarea{
         gap:10px;
         align-items:flex-start;
     }
+   .menu-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        display: none;
+        top: 80px;              /* below header */
+        width: 220px;           /* smaller panel */
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        z-index: 1000;
+        transition: 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 10px;             /* small floating position */
+        display: inline;
+    }
 }
+
+* {outline: red 1px dotted;}

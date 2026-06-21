@@ -14,6 +14,7 @@
         <div class="logo">
             NoteBook
         </div>
+        <button class="menu-toggle">☰</button>
     </header>
 
     <section>
@@ -46,7 +47,7 @@
         </aside>
 
         <!-- Main Editor -->
-        <div class="note-txtarea">
+        <div class="editor-area">
 
             <div class="editor-header">
                 <input class="book-name" placeholder="Untitled Note">
@@ -54,13 +55,13 @@
             </div>
 
             <ul class="toolbar">
-                <li><button>B</button></li>
-                <li><button>I</button></li>
-                <li><button>U</button></li>
+                <li><button class="editor-btn">B</button></li>
+                <li><button class="editor-btn">I</button></li>
+                <li><button class="editor-btn">U</button></li>
                 <li><button>Save</button></li>
             </ul>
 
-            <textarea placeholder="Start writing your thoughts..."></textarea>
+            <div id="editor" contenteditable="true" class="editor-box"></div>
 
             <div class="editor-footer">
                 <span>Words: 0</span>
@@ -75,12 +76,28 @@
 
 </body>
 <script>
+    // Function For Active Button
     const side_btn = document.querySelectorAll(".sidebar-btn");
     side_btn.forEach(buttons => {
         buttons.addEventListener("click", function () {
             document.querySelector(".sidebar-btn.active")?.classList.remove("active");
             this.classList.add("active");
         });
+    });
+
+    // Function For Toggle Button
+    const editor_btn = document.querySelectorAll(".editor-btn");
+    editor_btn.forEach(buttons => {
+        buttons.addEventListener("click", function () {
+            this.classList.toggle("active");
+        });
+    });
+    // Function For Toggle Side bar
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
     });
 </script>
 
