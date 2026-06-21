@@ -9,70 +9,79 @@
 </head>
 
 <body>
+
     <header class="header-style">
         <div class="logo">
             NoteBook
         </div>
     </header>
 
-<section>
-    <!-- Left Sidebar -->
-    <aside class="sidebar">
-        <h3 class="sidebar-title">Notebook</h3>
+    <section>
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
 
-        <button class="sidebar-btn active">
-            📚 Existed Books
-        </button>
+            <button class="sidebar-btn">
+                📚 Existed Books
+            </button>
 
-        <button class="sidebar-btn">
-            ➕ Create New Book
-        </button>
+            <button class="sidebar-btn">
+                ➕ Create New Book
+            </button>
 
-        <button class="sidebar-btn">
-            📝 Drafted Pages
-        </button>
+            <button class="sidebar-btn">
+                📝 Drafted Pages
+            </button>
 
-        <button class="sidebar-btn">
-            ⭐ Favorites
-        </button>
+            <button class="sidebar-btn">
+                ⭐ Favorites
+            </button>
 
-        <button class="sidebar-btn">
-            🗑️ Trash
-        </button>
+            <button class="sidebar-btn">
+                🗑️ Trash
+            </button>
 
-        <button class="sidebar-btn">
-            ⚙️ Settings
-        </button>
-    </aside>
+            <button class="sidebar-btn">
+                ⚙️ Settings
+            </button>
+        </aside>
 
-    <!-- Main Editor -->
-   <div class="note-txtarea">
+        <!-- Main Editor -->
+        <div class="note-txtarea">
 
-   <div class="editor-header">
-    <input class="book-name" placeholder="Untitled Note">
-    <span class="save-status">✓ Auto Saved</span>
-</div>
+            <div class="editor-header">
+                <input class="book-name" placeholder="Untitled Note">
+                <span class="save-status">✓ Auto Saved</span>
+            </div>
 
-<ul class="toolbar">
-    <li><button>B</button></li>
-    <li><button>I</button></li>
-    <li><button>U</button></li>
-    <li><button>Save</button></li>
-</ul>
+            <ul class="toolbar">
+                <li><button>B</button></li>
+                <li><button>I</button></li>
+                <li><button>U</button></li>
+                <li><button>Save</button></li>
+            </ul>
 
-<textarea placeholder="Start writing your thoughts..."></textarea>
+            <textarea placeholder="Start writing your thoughts..."></textarea>
 
-<div class="editor-footer">
-    <span>Words: 0</span>
-    <span>Characters: 0</span>
-    <span>Last Edited: Today</span>
-</div>
+            <div class="editor-footer">
+                <span>Words: 0</span>
+                <span>Characters: 0</span>
+                <span>Last Edited: Today</span>
+            </div>
 
-</div>
-  
-</section>
+        </div>
 
-   
+    </section>
+
+
 </body>
+<script>
+    const side_btn = document.querySelectorAll(".sidebar-btn");
+    side_btn.forEach(buttons => {
+        buttons.addEventListener("click", function () {
+            document.querySelector(".sidebar-btn.active")?.classList.remove("active");
+            this.classList.add("active");
+        });
+    });
+</script>
 
 </html>
